@@ -2,7 +2,7 @@
 
 TaskMaster is a modern and simple app to help you organize your daily tasks. It looks good and has all the tools you need to stay productive!
 
-## ✨ What it Does (Features)
+## Features
 
 * **Add Tasks:** Quickly add new tasks with a title, notes, and a due date.
 * **Edit Tasks:** Easily change your tasks.
@@ -24,15 +24,15 @@ TaskMaster is a modern and simple app to help you organize your daily tasks. It 
 * **Simple Messages:** Get small pop-up messages when you add, edit, or finish tasks.
 * **Quick Keys:** Use keyboard shortcuts to add tasks (`Ctrl/Cmd + Enter`) or clear search (`Escape`).
 
-## 🚀 How to Use
+## How to Use
 
 1.  **Download:** Get the code from this page.
 2.  **Open:** Just open the `todo.HTML` file in your web browser. That's it!
 
-## 🛠️ Built With
+## Tools
 
-* HTML, CSS, JavaScript (the basics of web building)
-* Bootstrap 5 (for a good-looking and responsive design)
+* HTML, CSS, JavaScript 
+* Bootstrap 5 
 
 ## 📂 Files
 
