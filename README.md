@@ -34,7 +34,7 @@ TaskMaster is a modern and simple app to help you organize your daily tasks. It 
 * HTML, CSS, JavaScript 
 * Bootstrap 5 
 
-## 📂 Files
+##  Files
 
 * `todo.HTML`: The main page of the app.
 * `style.css`: Makes the app look nice.
