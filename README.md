@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+<div align="center">
+  
+  # TaskMaster: A React To-Do Application
+  
+  <p>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p>
+    A clean, responsive, and modern to-do list application built with React and styled with Tailwind CSS. It provides a full-featured, single-page interface for managing daily tasks, all running completely on the client-side.
+  </p>
+</div>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### Core Task Management
+* **Complete Task Lifecycle:** Full **CRUD** (Create, Read, Update, Delete) functionality allows you to manage your tasks from start to finish.
+* **Rich Task Details:** Go beyond simple titles. Add detailed **descriptions**, assign **due dates** with times, set **priorities** (High, Medium, Low), and organize tasks with custom **categories**.
+* **Subtask Support:** Break down larger tasks into smaller, manageable steps with a simple subtask list.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Advanced Organization
+* **Dynamic Search:** Instantly find any task by searching through titles and descriptions.
+* **Powerful Filtering:** Display tasks based on their status (**All**, **Incomplete**, **Completed**) or by any custom **category**.
+* **Versatile Sorting:** Organize your list to suit your workflow. Sort tasks by **creation date** (newest/oldest), **title** (A-Z), **due date**, or **priority**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Modern User Experience
+* **Fully Responsive Design:** The UI is optimized for a seamless experience on all devices, from large desktops to mobile phones.
+* **Elegant Dark Mode:** Switch between a clean light theme and a sleek, eye-friendly dark theme with a single click.
+* **Simulated Multi-Page UI:** Enjoy the feel of a traditional multi-page website (Home, About, Contact) within a fast, single-page application architecture.
+* **Custom Modals & Toasts:** User interactions are handled through non-blocking modals for editing and confirmation, with feedback provided via clean toast notifications.
+* **Zero-Backend, Purely Client-Side:** All tasks are managed in the browser's local state via React hooks. This means **no database**, **no sign-up**, and **instant setup**. Your data stays with you.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+* **React:** The core of the application, built with functional components and modern hooks (`useState`, `useEffect`, `useRef`).
+* **Tailwind CSS:** A utility-first CSS framework used for all styling, enabling a responsive and highly customizable design.
+* **Vite:** A modern frontend build tool that provides a faster and leaner development experience.
+* **Bootstrap Icons:** Provides a clean and consistent set of icons used throughout the application.
+* **Google Fonts:** The "Montserrat" font is used for a clean, modern typography.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Application Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application is built with a component-based architecture, even though it resides in a single file for portability.
 
-### `npm run eject`
+```
+/src
+|-- App.jsx             # Main application component containing all logic and sub-components
+|-- index.css           # Global styles (if any)
+|-- main.jsx            # Entry point for the React application
+/public
+|-- index.html          # Main HTML file
+```
+The `App.jsx` file is structured internally as follows:
+- **Main App Component (`App`)**: Holds the application's state and core logic.
+- **Layout Components (`WebsiteHeader`, `WebsiteFooter`)**: The main navigation and footer.
+- **Page Components (`HomePage`, `AboutPage`, etc.)**: Each "page" is a separate component rendered based on the current navigation state.
+- **Task Components (`TaskList`, `TaskItem`, `AddTaskForm`)**: Components responsible for displaying and managing the to-do list.
+- **UI Components (`EditTaskModal`, `ConfirmationModal`, `ToastNotification`)**: Reusable components for user interaction and feedback.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started (for Beginners)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Here’s a simple way to get this project running on your computer, even if you're new to React.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.  **Create a New Project Folder:**
+    * On your computer, create a new folder and name it `taskmaster`.
 
-## Learn More
+2.  **Open a Terminal:**
+    * Open your terminal or command prompt (like Command Prompt on Windows or Terminal on Mac).
+    * Navigate into the new folder you just created:
+        ```bash
+        cd path/to/your/taskmaster
+        ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.  **Create a New Vite + React App:**
+    * Run the following command in your terminal. This will set up a basic React project for you.
+        ```bash
+        npm create vite@latest . -- --template react
+        ```
+    * When it asks if you want to proceed, type `y` and press Enter. The `.` at the end tells Vite to create the project in your current folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4.  **Install the Necessary Files:**
+    * Once the setup is complete, run this command to download the project's tools:
+        ```bash
+        npm install
+        ```
 
-### Code Splitting
+5.  **Add the Application Code:**
+    * Open the `taskmaster` folder in your code editor (like VS Code).
+    * Find the file at `src/App.jsx`.
+    * Delete all the code inside `App.jsx`.
+    * Copy the *entire code* for the TaskMaster application and paste it into the empty `App.jsx` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6.  **Start the App:**
+    * Go back to your terminal and run this command:
+        ```bash
+        npm run dev
+        ```
+    * Your new to-do app will open in your web browser!
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ by Niraj
+# TaskMaster
